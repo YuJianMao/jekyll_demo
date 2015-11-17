@@ -1,8 +1,10 @@
 ---
 layout: default
-title: ÄãºÃ£¬ÊÀ½ç
+title: æˆ‘çš„Blog
 ---
 {{ page.title }}
-ÎÒµÄµÚÒ»ÆªÎÄÕÂ
+æœ€æ–°æ–‡ç« 
 
-{{ page.date | date_to_string }}
+{% for post in site.posts %}
+{{ post.date | date_to_string }} {{ post.title }}
+{% endfor %}
